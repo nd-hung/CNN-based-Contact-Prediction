@@ -9,14 +9,10 @@ DeepCon:
 Dilated convolution network with dropout (best reported performing model, Fig.3d)
 https://github.com/ba-lab/DEEPCON/
 
-# Datasets
+## Datasets
+Get train & test data from http://bioinfadmin.cs.ucl.ac.uk/downloads/contact_pred_datasets/
 
-wget http://bioinfadmin.cs.ucl.ac.uk/downloads/contact_pred_datasets/dc_train.README
-wget http://bioinfadmin.cs.ucl.ac.uk/downloads/contact_pred_datasets/dc_train.tgz
-wget http://bioinfadmin.cs.ucl.ac.uk/downloads/contact_pred_datasets/psicov150_aln_pdb.README
-wget http://bioinfadmin.cs.ucl.ac.uk/downloads/contact_pred_datasets/psicov150_aln_pdb.tgz
-
-# Data structure
+## Data structure
 ```console
 DeepCov/
     setup.sh # script to compile cov21stats 
@@ -47,25 +43,21 @@ DeepCov/
                      rr/  # predicted contact maps
 ```
 
-# Data preparation
-## Compile feature extractor
+## Data preparation
+### Compile feature extractor
 Get the scripts setup.sh and cov21stats at https://github.com/psipred/DeepCov
 Run setup.sh to compile the extractor:
 ```console
 ./setup.sh
 ```
 
-## Get data
-Get train & test data from http://bioinfadmin.cs.ucl.ac.uk/downloads/contact_pred_datasets/
-Extract the datasets to DeepCov/data folder following the structure.
-
-## Run feature extraction
+### Run feature extraction
 Run once:
 ```python
 feature_extraction.ipynb
 ```
 
-# Run training 
+## Run training 
 - For the first time training, run:
 ```python
 python train.py [--model=DeepCon] [--gpu=1]
@@ -77,21 +69,21 @@ python train.py [--model=DeepCon] [--gpu=1]
 python train.py [--model=DeepCon] [--gpu=1] [--resume=DeepCov_checkpoint.pth.tar]
 ```
 
-# Prediction on test data
+## Prediction on test data
 - Modify the path to prediction folder if needed (default: 'data/test/psicov150/rr')
 - Run
 ```Python
 predict.ipynb
 ```
 
-# Evaluation
+## Evaluation
 - Modify the path to prediction folder if needed (default: 'data/test/psicov150/rr')
 - Run
 ```Python
 evaluate.ipynb
 ```
 
-# Read results (precision in long-range distance: P@5, P@L/10, P@L/5, P@L/2, P@L)
+## Read results (precision in long-range distance: P@5, P@L/10, P@L/5, P@L/2, P@L)
 - Modify the result file name
 - Run
 ```Python
