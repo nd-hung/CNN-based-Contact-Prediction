@@ -1,16 +1,14 @@
 Reimplementation of CNN-based contact prediction models
 
 DeepCov:
-Fully convolutional neural networks for protein residue-residue contact prediction
-David T. Jones and Shaun M. Kandathil - University College London
-https://github.com/psipred/DeepCov
+[Fully convolutional neural networks for protein residue-residue contact prediction
+David T. Jones and Shaun M. Kandathil - University College London](https://github.com/psipred/DeepCov)
 
 DeepCon:
-Dilated convolution network with dropout (best reported performing model, Fig.3d)
-https://github.com/ba-lab/DEEPCON/
+[Dilated convolution network with dropout (best reported performing model, Fig.3d)](https://github.com/ba-lab/DEEPCON/)
 
 ## Datasets
-Get train & test data from http://bioinfadmin.cs.ucl.ac.uk/downloads/contact_pred_datasets/
+Get train & test data from [Bioinformatics Group, UCL DEPARTMENT OF COMPUTER SCIENCE](http://bioinfadmin.cs.ucl.ac.uk/downloads/contact_pred_datasets/)
 
 ## Data structure
 ```console
